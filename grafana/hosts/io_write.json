@@ -1,0 +1,244 @@
+{
+  "aliasColors": {},
+  "bars": false,
+  "dashLength": 10,
+  "dashes": false,
+  "datasource": "influxdb_telegraf",
+  "fill": 1,
+  "id": 6,
+  "legend": {
+    "avg": false,
+    "current": false,
+    "max": false,
+    "min": false,
+    "show": true,
+    "total": false,
+    "values": false
+  },
+  "lines": true,
+  "linewidth": 1,
+  "links": [],
+  "nullPointMode": "null",
+  "percentage": false,
+  "pointradius": 5,
+  "points": false,
+  "renderer": "flot",
+  "seriesOverrides": [],
+  "spaceLength": 10,
+  "span": 3,
+  "stack": false,
+  "steppedLine": false,
+  "targets": [
+    {
+      "alias": "132",
+      "dsType": "influxdb",
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "diskio",
+      "orderByTime": "ASC",
+      "policy": "default",
+      "refId": "A",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "writes"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "mean"
+          }
+        ]
+      ],
+      "tags": [
+        {
+          "key": "host",
+          "operator": "=",
+          "value": "manager-132"
+        }
+      ]
+    },
+    {
+      "alias": "134",
+      "dsType": "influxdb",
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "diskio",
+      "orderByTime": "ASC",
+      "policy": "default",
+      "refId": "B",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "writes"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "mean"
+          }
+        ]
+      ],
+      "tags": [
+        {
+          "key": "host",
+          "operator": "=",
+          "value": "manager-134"
+        }
+      ]
+    },
+    {
+      "alias": "135",
+      "dsType": "influxdb",
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "diskio",
+      "orderByTime": "ASC",
+      "policy": "default",
+      "refId": "C",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "writes"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "mean"
+          }
+        ]
+      ],
+      "tags": [
+        {
+          "key": "host",
+          "operator": "=",
+          "value": "work-135"
+        }
+      ]
+    },
+    {
+      "alias": "136",
+      "dsType": "influxdb",
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "diskio",
+      "orderByTime": "ASC",
+      "policy": "default",
+      "refId": "D",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "writes"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "mean"
+          }
+        ]
+      ],
+      "tags": [
+        {
+          "key": "host",
+          "operator": "=",
+          "value": "work-136"
+        }
+      ]
+    }
+  ],
+  "thresholds": [],
+  "timeFrom": null,
+  "timeShift": null,
+  "title": "磁盘IO-写",
+  "tooltip": {
+    "shared": true,
+    "sort": 0,
+    "value_type": "individual"
+  },
+  "type": "graph",
+  "xaxis": {
+    "buckets": null,
+    "mode": "time",
+    "name": null,
+    "show": true,
+    "values": []
+  },
+  "yaxes": [
+    {
+      "format": "bps",
+      "label": null,
+      "logBase": 1,
+      "max": null,
+      "min": null,
+      "show": true
+    },
+    {
+      "format": "bps",
+      "label": null,
+      "logBase": 1,
+      "max": null,
+      "min": null,
+      "show": true
+    }
+  ]
+}

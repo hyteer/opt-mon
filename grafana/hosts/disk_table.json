@@ -1,0 +1,223 @@
+{
+  "columns": [
+    {
+      "text": "Current",
+      "value": "current"
+    }
+  ],
+  "datasource": "influxdb_telegraf",
+  "fontSize": "100%",
+  "id": 2,
+  "links": [],
+  "pageSize": null,
+  "scroll": true,
+  "showHeader": true,
+  "sort": {
+    "col": null,
+    "desc": false
+  },
+  "span": 3,
+  "styles": [
+    {
+      "alias": "Time",
+      "dateFormat": "YYYY-MM-DD HH:mm:ss",
+      "pattern": "Time",
+      "type": "date"
+    },
+    {
+      "alias": "",
+      "colorMode": null,
+      "colors": [
+        "rgba(245, 54, 54, 0.9)",
+        "rgba(237, 129, 40, 0.89)",
+        "rgba(50, 172, 45, 0.97)"
+      ],
+      "decimals": 2,
+      "pattern": "/.*/",
+      "thresholds": [],
+      "type": "number",
+      "unit": "short"
+    }
+  ],
+  "targets": [
+    {
+      "alias": "132",
+      "dsType": "influxdb",
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "disk",
+      "orderByTime": "ASC",
+      "policy": "default",
+      "refId": "A",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "free"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "last"
+          }
+        ]
+      ],
+      "tags": [
+        {
+          "key": "host",
+          "operator": "=",
+          "value": "manager-132"
+        }
+      ]
+    },
+    {
+      "alias": "134",
+      "dsType": "influxdb",
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "disk",
+      "orderByTime": "ASC",
+      "policy": "default",
+      "refId": "B",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "free"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "last"
+          }
+        ]
+      ],
+      "tags": [
+        {
+          "key": "host",
+          "operator": "=",
+          "value": "manager-134"
+        }
+      ]
+    },
+    {
+      "alias": "135",
+      "dsType": "influxdb",
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "disk",
+      "orderByTime": "ASC",
+      "policy": "default",
+      "refId": "C",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "free"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "last"
+          }
+        ]
+      ],
+      "tags": [
+        {
+          "key": "host",
+          "operator": "=",
+          "value": "work-135"
+        }
+      ]
+    },
+    {
+      "alias": "136",
+      "dsType": "influxdb",
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "disk",
+      "orderByTime": "ASC",
+      "policy": "default",
+      "refId": "D",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "free"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "last"
+          }
+        ]
+      ],
+      "tags": [
+        {
+          "key": "host",
+          "operator": "=",
+          "value": "work-136"
+        }
+      ]
+    }
+  ],
+  "title": "磁盘-可用空间",
+  "transform": "timeseries_aggregations",
+  "type": "table"
+}

@@ -1,0 +1,518 @@
+{
+  "aliasColors": {},
+  "bars": false,
+  "dashLength": 10,
+  "dashes": false,
+  "datasource": "-- Mixed --",
+  "fill": 1,
+  "id": 17,
+  "legend": {
+    "avg": false,
+    "current": false,
+    "max": false,
+    "min": false,
+    "show": true,
+    "total": false,
+    "values": false
+  },
+  "lines": true,
+  "linewidth": 1,
+  "links": [],
+  "nullPointMode": "null",
+  "percentage": false,
+  "pointradius": 5,
+  "points": false,
+  "renderer": "flot",
+  "seriesOverrides": [],
+  "spaceLength": 10,
+  "span": 6,
+  "stack": false,
+  "steppedLine": false,
+  "targets": [
+    {
+      "alias": "Base",
+      "datasource": "influxdb_source",
+      "dsType": "influxdb",
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "cpu_usage_per_cpu",
+      "orderByTime": "ASC",
+      "policy": "default",
+      "refId": "A",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "value"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "mean"
+          }
+        ]
+      ],
+      "tags": [
+        {
+          "key": "com.docker.swarm.service.name",
+          "operator": "=",
+          "value": "gray_Base"
+        }
+      ]
+    },
+    {
+      "alias": "Merchant",
+      "datasource": "influxdb_source",
+      "dsType": "influxdb",
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "cpu_usage_per_cpu",
+      "orderByTime": "ASC",
+      "policy": "default",
+      "refId": "B",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "value"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "mean"
+          }
+        ]
+      ],
+      "tags": [
+        {
+          "key": "com.docker.swarm.service.name",
+          "operator": "=",
+          "value": "gray_Merchant"
+        }
+      ]
+    },
+    {
+      "alias": "Message",
+      "datasource": "influxdb_source",
+      "dsType": "influxdb",
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "cpu_usage_per_cpu",
+      "orderByTime": "ASC",
+      "policy": "default",
+      "refId": "C",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "value"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "mean"
+          }
+        ]
+      ],
+      "tags": [
+        {
+          "key": "com.docker.swarm.service.name",
+          "operator": "=",
+          "value": "gray_Message"
+        }
+      ]
+    },
+    {
+      "alias": "Order",
+      "datasource": "influxdb_source",
+      "dsType": "influxdb",
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "cpu_usage_per_cpu",
+      "orderByTime": "ASC",
+      "policy": "default",
+      "refId": "D",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "value"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "mean"
+          }
+        ]
+      ],
+      "tags": [
+        {
+          "key": "com.docker.swarm.service.name",
+          "operator": "=",
+          "value": "gray_Order"
+        }
+      ]
+    },
+    {
+      "alias": "Pay",
+      "datasource": "influxdb_source",
+      "dsType": "influxdb",
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "cpu_usage_per_cpu",
+      "orderByTime": "ASC",
+      "policy": "default",
+      "refId": "E",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "value"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "mean"
+          }
+        ]
+      ],
+      "tags": [
+        {
+          "key": "com.docker.swarm.service.name",
+          "operator": "=",
+          "value": "gray_Pay"
+        }
+      ]
+    },
+    {
+      "alias": "Product",
+      "datasource": "influxdb_source",
+      "dsType": "influxdb",
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "cpu_usage_per_cpu",
+      "orderByTime": "ASC",
+      "policy": "default",
+      "refId": "F",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "value"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "mean"
+          }
+        ]
+      ],
+      "tags": [
+        {
+          "key": "com.docker.swarm.service.name",
+          "operator": "=",
+          "value": "gray_Product"
+        }
+      ]
+    },
+    {
+      "alias": "Qrcode",
+      "datasource": "influxdb_source",
+      "dsType": "influxdb",
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "cpu_usage_per_cpu",
+      "orderByTime": "ASC",
+      "policy": "default",
+      "refId": "G",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "value"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "mean"
+          }
+        ]
+      ],
+      "tags": [
+        {
+          "key": "com.docker.swarm.service.name",
+          "operator": "=",
+          "value": "gray_Qrcode"
+        }
+      ]
+    },
+    {
+      "alias": "Shop",
+      "datasource": "influxdb_source",
+      "dsType": "influxdb",
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "cpu_usage_per_cpu",
+      "orderByTime": "ASC",
+      "policy": "default",
+      "refId": "H",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "value"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "mean"
+          }
+        ]
+      ],
+      "tags": [
+        {
+          "key": "com.docker.swarm.service.name",
+          "operator": "=",
+          "value": "gray_Shop"
+        }
+      ]
+    },
+    {
+      "alias": "ThirdParty",
+      "datasource": "influxdb_source",
+      "dsType": "influxdb",
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "cpu_usage_per_cpu",
+      "orderByTime": "ASC",
+      "policy": "default",
+      "refId": "I",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "value"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "mean"
+          }
+        ]
+      ],
+      "tags": [
+        {
+          "key": "com.docker.swarm.service.name",
+          "operator": "=",
+          "value": "gray_ThirdParty"
+        }
+      ]
+    },
+    {
+      "alias": "ThirdPartyInterface",
+      "datasource": "influxdb_source",
+      "dsType": "influxdb",
+      "groupBy": [
+        {
+          "params": [
+            "$__interval"
+          ],
+          "type": "time"
+        },
+        {
+          "params": [
+            "null"
+          ],
+          "type": "fill"
+        }
+      ],
+      "measurement": "cpu_usage_per_cpu",
+      "orderByTime": "ASC",
+      "policy": "default",
+      "refId": "J",
+      "resultFormat": "time_series",
+      "select": [
+        [
+          {
+            "params": [
+              "value"
+            ],
+            "type": "field"
+          },
+          {
+            "params": [],
+            "type": "mean"
+          }
+        ]
+      ],
+      "tags": [
+        {
+          "key": "com.docker.swarm.service.name",
+          "operator": "=",
+          "value": "gray_ThirdPartyInterface"
+        }
+      ]
+    }
+  ],
+  "thresholds": [],
+  "timeFrom": null,
+  "timeShift": null,
+  "title": "Gray-服务CPU",
+  "tooltip": {
+    "shared": true,
+    "sort": 0,
+    "value_type": "individual"
+  },
+  "type": "graph",
+  "xaxis": {
+    "buckets": null,
+    "mode": "time",
+    "name": null,
+    "show": true,
+    "values": []
+  },
+  "yaxes": [
+    {
+      "format": "hertz",
+      "label": null,
+      "logBase": 1,
+      "max": null,
+      "min": null,
+      "show": true
+    },
+    {
+      "format": "Bps",
+      "label": null,
+      "logBase": 1,
+      "max": null,
+      "min": null,
+      "show": true
+    }
+  ]
+}
