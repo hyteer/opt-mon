@@ -1,0 +1,9 @@
+version: '3.1'
+services:
+  agent-7:
+    image: zabbix/zabbix-agent:latest
+    environment:
+      ZBX_HOSTNAME: 'node-7'
+      ZBX_SERVER_HOST: server
+    depends_on:
+      - server

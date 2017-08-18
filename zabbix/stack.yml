@@ -1,0 +1,36 @@
+version: '3.1'
+services:
+  server:
+    image: zabbix/zabbix-server-mysql:alpine-3.2-latest
+    environment:
+      DB_SERVER_HOST: '10.20.60.3'
+      MYSQL_DATABASE: 'demo_zabbix'
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 111
+  agent-3:
+    image: zabbix/zabbix-agent:latest
+    environment:
+      ZBX_HOSTNAME: 'node-3'
+      ZBX_SERVER_HOST: server
+    depends_on:
+      - server
+  agent-7:
+    image: zabbix/zabbix-agent:latest
+    environment:
+      ZBX_HOSTNAME: 'node-7'
+      ZBX_SERVER_HOST: server
+    depends_on:
+      - server
+  web:
+    image: zabbix/zabbix-web-nginx-mysql
+    environment:
+      ZBX_SERVER_HOST: server
+      DB_SERVER_HOST: '10.20.60.3'
+      MYSQL_DATABASE: 'demo_zabbix'
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 111
+      PHP_TZ: 'Asia/Shanghai'
+    ports:
+      - 80:80
+    depends_on:
+      - server
